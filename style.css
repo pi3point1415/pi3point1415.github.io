@@ -9,7 +9,7 @@ body {
     background-color: #ddd;
     display: flex;
     flex-flow: column;
-    font-family: calibri;
+    font-family: calibri, sans-serif;
 }
 
 content {
@@ -27,9 +27,10 @@ nav {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #3339;
+    background-color: #333;
     justify-content: center;
-    font-family: calibri
+    z-index:2;
+    opacity: 0.75;
 }
     
 nav ul {
@@ -55,19 +56,44 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #1119;
+    background-color: #111;
 }
 
 #active {
-    background-color: #0a69;
+    background-color: #0a6;
 }
 
 header {
-    height: 50px;
-    background-color: #333;
+    display: flex;
+    top: 0;
+    left: 0;
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #333;
+    justify-content: center;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    display: block;
+    padding: 14px 16px;
+    color: #0000;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 main {
@@ -81,28 +107,40 @@ main {
 }
 
 #title {
-    padding: 0px 16px 16px 16px;
-    background-color: yellow;
+    padding: 0;
+    background-color: #ebd14c;
+    max-height: 20vh;
     width: auto;
+    display: flex;
+/*    justify-content: space-between;*/
 }
 
-#title h1 {
-    font-size: 6vw;
-    margin-top: 0px;
-    font-weight: normal;
-    display: inline;
-    font-family: times;
+#title .text {
+    flex: 76%;
+    margin: 16px 32px 16px 16px;
 }
 
-#title h2 {
-    font-size: 3vw;
-    font-weight: normal;
+#title .image {
+    flex: 24%;
+    margin: 16px;
+    text-align: right;
+}
+
+#title svg {
+    flex: 90%;
+    height: 100%;
+    text-align: left;
+}
+
+#title .main {
+    font-size: 32px;
+    font-family: times, serif;
 }
 
 #title img {
-    float: right;
-    height: 11vw;
-    margin: 16px 16px 0 16px;
+    height: 100%;
+    margin: 0;
+    flex: 0%
 }
 
 footer {
@@ -116,6 +154,7 @@ footer {
     overflow: hidden;
     color: white;
     font-size: 14px;
+    z-index:2;
 }
 
 footer p {
@@ -143,6 +182,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio*/
+    z-index: 1;
 }
 
 .responsive-iframe {
@@ -157,6 +197,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .actives h2 {
     text-decoration: underline;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap div {
+    flex: 50%;
+    max-width: 50%;
 }
 
 .row {
@@ -177,6 +227,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 800px) {
+    .wrap div {
+        flex: 100%;
+        max-width: 100%;
+    }
     .column {
         flex: 50%;
         max-width: 50%;
