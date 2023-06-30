@@ -52,8 +52,12 @@ nav a:hover {
     background-color: #111;
 }
 
-#active {
+.active {
     background-color: #0a6;
+}
+
+.active:hover {
+    background-color: #064;
 }
 
 header {
