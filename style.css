@@ -15,7 +15,7 @@ body {
     font-size: clamp(0.75rem, 0.75rem + 0.25vw, 1rem);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
 
 @media (max-device-width: 800px) {
