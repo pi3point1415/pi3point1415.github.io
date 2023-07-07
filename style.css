@@ -59,7 +59,6 @@ nav li {
 }
 
 nav a {
-    flex: 1;
     display: block;
     font-size: 1em;
     padding: 1em;
@@ -76,7 +75,12 @@ nav a {
         justify-content: space-evenly;
     }
 
+    nav li {
+        flex: auto;
+    }
+
     nav a {
+        width: 100%;
         padding: 1em 0;
         white-space: nowrap;
         overflow: hidden;
@@ -85,6 +89,7 @@ nav a {
 
 @media (max-device-width: 600px) {
     nav a {
+        background-color: #fff;
         font-size: 0.75em;
     }
 }
