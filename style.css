@@ -67,7 +67,7 @@ nav a {
     text-decoration: none;
 }
 
-@media (max-device-width: 800px), (max-width: 600px) {
+@media (max-device-width: 800px), (max-width: 800px) {
     nav ul {
         display: flex;
         width: 100%;
@@ -81,15 +81,14 @@ nav a {
 
     nav a {
         width: 100%;
-        padding: 1em 0;
+        padding: 1em 0.5em;
         white-space: nowrap;
         overflow: hidden;
     }
 }
 
-@media (max-device-width: 600px) {
+@media (max-width: 600px) {
     nav a {
-        background-color: #fff;
         font-size: 0.75em;
     }
 }
