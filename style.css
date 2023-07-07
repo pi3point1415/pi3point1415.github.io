@@ -46,7 +46,7 @@ nav {
     justify-content: center;
     z-index: 2;
 }
-    
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -68,35 +68,24 @@ nav a {
     text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-device-width: 800px), (max-width: 600px) {
     nav ul {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
-    nav li {
-        flex: 1;
-    }
+
     nav a {
-        padding: 1em 1em;
+        padding: 1em 0;
         white-space: nowrap;
         overflow: hidden;
     }
 }
 
-@media (max-device-width: 800px) {
-    nav ul {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    nav li {
-        flex: 1;
-    }
+@media (max-device-width: 600px) {
     nav a {
-        padding: 2em 1em;
-        white-space: nowrap;
-        overflow: hidden;
+        font-size: 0.75em;
     }
 }
 
@@ -124,6 +113,10 @@ header {
     height: 10rem;
 }
 
+header a {
+    height: 100%;
+}
+
 header img {
     height: 100%;
 }
@@ -148,9 +141,11 @@ header h2 {
     header {
         height: 12em;
     }
+
     header h1 {
         font-size: 6em;
     }
+
     header h2 {
         font-size: 2.25em;
     }
@@ -160,9 +155,11 @@ header h2 {
     header {
         height: 8em;
     }
+
     header h1 {
         font-size: 4em;
     }
+
     header h2 {
         font-size: 1.6em;
     }
@@ -172,9 +169,11 @@ header h2 {
     header {
         height: 6em;
     }
+
     header h1 {
         font-size: 3em;
     }
+
     header h2 {
         font-size: 1.2em;
     }
@@ -228,25 +227,6 @@ footer a {
     border-style: none;
 }
 
-.actives {
-    line-height: 1;
-}
-
-.actives p {
-    text-align: left;
-    text-justify: none;
-}
-
-@media (max-device-width: 800px) {
-    .actives {
-        line-height: 1.5;
-    }
-}
-
-.actives h2 {
-    text-decoration: underline;
-}
-
 .wrap {
     display: flex;
     flex-wrap: wrap;
@@ -286,10 +266,12 @@ footer a {
         flex: 100%;
         max-width: 100%;
     }
+
     .column3 {
         flex: 50%;
         max-width: 50%;
     }
+
     .column2 {
         flex: 100%;
         max-width: 100%;
