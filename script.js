@@ -1,7 +1,9 @@
 // Last subtitle
 let last = null;
 // Possible subtitles
-let options;
+let options = null;
+// Has updated via scroll
+let scrolled = false;
 
 
 // Code for changing subtitle
@@ -14,7 +16,7 @@ function setSubtitleInitial() {
 
             setSubtitle();
         }
-    };
+    }
 
     xhttp.open("GET", "et.txt", true);
     xhttp.send();
@@ -60,6 +62,22 @@ function importNavbar() {
     }
     xhttp.open("GET", "navbar.html", true);
     xhttp.send();
+}
+
+window.onscroll = function () {
+    let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    let header = document.getElementsByTagName("header")[0];
+    let headerHeight = parseInt(window.getComputedStyle(header).getPropertyValue("height"))
+
+    if (scroll > headerHeight) {
+        if (!scrolled) {
+            setSubtitle();
+            scrolled = true;
+        }
+    }
+    else {
+        scrolled = false;
+    }
 }
 
 setSubtitleInitial();
