@@ -38,6 +38,9 @@ function setSubtitle() {
 // Code for active navbar page
 function importNavbar() {
     let page = window.location.pathname.split("/").pop();
+    if (page === "") {
+        page = "index.html";
+    }
 
     let nav = document.getElementsByTagName("nav")[0];
 
