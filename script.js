@@ -1,11 +1,10 @@
-// Currently rolling new subtitle
-let rolling = false;
 // Last subtitle
 let last = null;
 // Possible subtitles
 let options;
 
 
+// Code for changing subtitle
 function setSubtitleInitial() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -21,7 +20,6 @@ function setSubtitleInitial() {
     xhttp.send();
 }
 
-// Code for changing subtitle
 function setSubtitle() {
     let sub = document.getElementById("subtitle");
 
@@ -62,35 +60,6 @@ function importNavbar() {
     }
     xhttp.open("GET", "navbar.html", true);
     xhttp.send();
-}
-
-// Code for clicking the die to randomize the ET text
-function rollDice() {
-    if (rolling) {
-        return;
-    }
-    rolling = true;
-
-    let die = document.getElementById("die");
-
-
-    let t1 = new Date().getTime();
-    let interval = 500;
-    let delay = 50;
-
-    function updateDie() {
-        let num = Math.floor(Math.random() * 6) + 1
-        die.className = "die" + num
-        if (new Date().getTime() - t1 < interval) {
-            setTimeout(updateDie, delay);
-        }
-        else {
-            setSubtitle();
-            rolling = false;
-        }
-    }
-
-    setTimeout(updateDie, delay);
 }
 
 setSubtitleInitial();

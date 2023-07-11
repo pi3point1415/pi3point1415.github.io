@@ -138,8 +138,7 @@ header h1 {
 
 #subContainer {
     display: flex;
-    align-items: center;
-    justify-content: left;
+    align-items: baseline;
 }
 
 header h2 {
@@ -147,40 +146,17 @@ header h2 {
     font-weight: normal;
 }
 
-#die {
-    width: 2em;
-    height: 2em;
+#refresh {
+    width: 3em;
+    height: 3em;
     margin: 0 1em 0 1em;
+    background: url("images/refresh.svg") 0 0;
+    background-size: 100% 200%;
 }
 
-.die1 {
-    background: url(images/die.png) 0 0;
-    background-size : 2em 12em;
-}
-
-.die2 {
-    background: url(images/die.png) 0 -2em;
-    background-size : 2em 12em;
-}
-
-.die3 {
-    background: url(images/die.png) 0 -4em;
-    background-size : 2em 12em;
-}
-
-.die4 {
-    background: url(images/die.png) 0 -6em;
-    background-size : 2em 12em;
-}
-
-.die5 {
-    background: url(images/die.png) 0 -8em;
-    background-size : 2em 12em;
-}
-
-.die6 {
-    background: url(images/die.png) 0 -10em;
-    background-size : 2em 12em;
+#refresh:hover {
+    background: url("images/refresh.svg") 0 -100%;
+    background-size: 100% 200%;
 }
 
 @media (max-device-width: 800px) {
@@ -190,6 +166,11 @@ header h2 {
 
     header h1 {
         font-size: 6em;
+    }
+
+    #refresh {
+        width: 3.6em;
+        height: 3.6em;
     }
 
     header h2 {
@@ -206,6 +187,11 @@ header h2 {
         font-size: 4em;
     }
 
+    #refresh {
+        width: 2.4em;
+        height: 2.4em;
+    }
+
     header h2 {
         font-size: 1.6em;
     }
@@ -218,6 +204,11 @@ header h2 {
 
     header h1 {
         font-size: 3em;
+    }
+
+    #refresh {
+        width: 1.8em;
+        height: 1.8em;
     }
 
     header h2 {
