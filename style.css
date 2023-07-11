@@ -136,9 +136,51 @@ header h1 {
     font-family: 'Playfair Display', serif;
 }
 
+#subContainer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
 header h2 {
     font-size: 2em;
     font-weight: normal;
+}
+
+#die {
+    width: 2em;
+    height: 2em;
+    margin: 0 1em 0 1em;
+}
+
+.die1 {
+    background: url(images/die.png) 0 0;
+    background-size : 2em 12em;
+}
+
+.die2 {
+    background: url(images/die.png) 0 -2em;
+    background-size : 2em 12em;
+}
+
+.die3 {
+    background: url(images/die.png) 0 -4em;
+    background-size : 2em 12em;
+}
+
+.die4 {
+    background: url(images/die.png) 0 -6em;
+    background-size : 2em 12em;
+}
+
+.die5 {
+    background: url(images/die.png) 0 -8em;
+    background-size : 2em 12em;
+}
+
+.die6 {
+    background: url(images/die.png) 0 -10em;
+    background-size : 2em 12em;
 }
 
 @media (max-device-width: 800px) {
